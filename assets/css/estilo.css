@@ -3,6 +3,10 @@
     margin: 0px;
 }
 
+.usuario {
+    font-weight: bold;
+}
+
 .usuario img{
     width: 20px;
 }
