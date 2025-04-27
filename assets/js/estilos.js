@@ -26,7 +26,7 @@ document.getElementById('btn-publicar').addEventListener('click', function() {
                         */
    
 // aqui esta la variable texto, que junto con value, lee lo que esta dentro del formulario de texto.
-    var texto = document.querySelector('input').value;
+    var texto = document.getElementById('texto-caja').value;
 
     // Aqui estoy haciendo una validacion, si el texto esta vacio, no hace nada.
     if(texto.length < 1) {
@@ -35,11 +35,11 @@ document.getElementById('btn-publicar').addEventListener('click', function() {
     // y aqui lo mas "complicado". Lista, que es el bloque de comentarios, le estoy agregando un nuevo bloque de comentarios, usando innerHTML entro al bloque para modificarlo desde dentro del HTML, que es lo que se ve en la pagina obviamente. se escribe igual como si fueras a agregar un nuevo comentario en el html, pero se concatena con la variable texto, que es lo que esta escrito en el formulario.
     lista.innerHTML +=
         '<li><div class="comentario">' +
-          '<img src="assets/imgs/pdi-pfp.jpg" alt="">' +
-          '<strong>PoliciaDeInvestigaciones</strong>' +
+          '<img src="assets/imgs/walter.jpeg" alt="">' +
+          '<strong>Heisenberg</strong>' +
           '<p>' + texto + '</p>' +
         '</div></li>';
-        document.querySelector('input').value = '' // Aqui estoy limpiando el input, para que quede vacio una vez que se aprete el boton de enviar comentario.
+        document.getElementById('texto-caja').value = '' // Aqui estoy limpiando el input, para que quede vacio una vez que se aprete el boton de enviar comentario.
         }
 }) 
 
