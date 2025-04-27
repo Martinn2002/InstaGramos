@@ -1,0 +1,50 @@
+// Le voy a poner comentarios linea por linea para que sepas que hace cada cosa, por que uff. ya me estaba quedando mas pelado de lo que estoy peleando con esto y era tan simple mas encima
+
+// El event listener ya sabes que hace, se apreta el boton y se ejecuta la funcion. OJO, el id del boton es btn-publicar, al principio se lo puse al formulario completo y cada vez que apretaba el formulario se escribia algo.
+
+document.getElementById('btn-publicar').addEventListener('click', function() {
+
+    // Aqui estoy creando una variable que se llama lista y le estoy asignando el bloque completo de id 'lista-comentarios', buscalo en el html, si andas flojito, esta despues de la variable:    
+    var lista = document.getElementById('lista-comentarios');
+    /*
+                        <ul id="lista-comentarios">
+                            <li>
+                            <div class="comentario">
+                              <img src="assets/imgs/capNCook.jpg" alt="">
+                              <strong>CapnCook</strong>
+                              <p>¡Mr. White, estoy detrás de usted!</p>
+                            </div>
+                          </li>
+                          <li>
+                            <div class="comentario">
+                              <img src="assets/imgs/losPollosHermanos.webp" alt="">
+                              <strong>LosPollosHermanos</strong>
+                              <p>¿Qué tal, amigo? ¿Necesitas ayuda?</p>
+                            </div>
+                          </li>
+                        </ul>
+                        */
+   
+// aqui esta la variable texto, que junto con value, lee lo que esta dentro del formulario de texto.
+    var texto = document.querySelector('input').value;
+
+    // Aqui estoy haciendo una validacion, si el texto esta vacio, no hace nada.
+    if(texto.length < 1) {
+        return
+    }else {
+    // y aqui lo mas "complicado". Lista, que es el bloque de comentarios, le estoy agregando un nuevo bloque de comentarios, usando innerHTML entro al bloque para modificarlo desde dentro del HTML, que es lo que se ve en la pagina obviamente. se escribe igual como si fueras a agregar un nuevo comentario en el html, pero se concatena con la variable texto, que es lo que esta escrito en el formulario.
+    lista.innerHTML +=
+        '<li><div class="comentario">' +
+          '<img src="assets/imgs/pdi-pfp.jpg" alt="">' +
+          '<strong>PoliciaDeInvestigaciones</strong>' +
+          '<p>' + texto + '</p>' +
+        '</div></li>';
+        document.querySelector('input').value = '' // Aqui estoy limpiando el input, para que quede vacio una vez que se aprete el boton de enviar comentario.
+        }
+}) 
+
+//Se podria hacer una variable para el nombre de usuario y la foto, pero lo esencial es que el comentario se guarde y es pal lunes esto asi que tutito 😴.
+
+
+// Nota adicional, el formulario es type "button" por que si lo escribes con type "submit" se recarga la pagina y no queda guardado el comentario.
+    
