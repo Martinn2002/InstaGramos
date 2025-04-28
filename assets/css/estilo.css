@@ -29,6 +29,24 @@ header {
   height: 40px;
 }
 
+a{
+  color: #198754 !important;
+}
+
+button{
+  background-color: #198754;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+
+.post-acciones button {
+  color: #000000 !important;
+}
+
 .search-box button {
   padding: 5px;
   background-color: #409e2d;
