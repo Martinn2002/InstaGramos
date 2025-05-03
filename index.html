@@ -17,7 +17,7 @@
     >
 </head>
 <body>
-  <header>
+  <header class="no-se-muestra">
     <div class="logo"><img src="assets/imgs/LOGOINS.png" alt="" width="250" height="auto"></div>
     <div class="search-box">
       <input type="text" placeholder="Buscar...">
@@ -28,12 +28,38 @@
       <i class="fas fa-user"></i>
       <i class="fas fa-envelope"></i>
       <i class="fas fa-cog"></i>
-      <img src="assets/imgs/walter.jpeg" alt="Usuario">
+      <img src="assets/imgs/walter.jpeg" id = "usuario-img" alt="Usuario">
     </div>
   </header>
     <main>
         <div class="container">
-            <div class="row">
+            <div class="login-popup">
+                <div class="text-center mb-4">
+                    <h1 class="h4 mb-3">Bienvenido a <br> <img src="assets/imgs/LOGOINS.png" alt="Logo" style="max-width: 200px; height: auto;"> </h1>
+                    <p>Conecta con otros criminales y comparte tus experiencias.</p>
+                </div>
+                <form>
+                    <div>
+                        <input class="form-control" type="file" id="foto">
+                        <img  id="usuario">
+                    </div>
+    
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="usuarioNombre" name="usuarioNombre" placeholder="Nombre de usuario" required>
+                    </div>
+    
+                    <div class="mb-3">
+                        <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required> </div>
+    
+                    <div class="mb-3 text-center">
+                        <button type="button" id="btn-login" class="button"> Registrarse </button>
+                    </div>
+                    <div class="text-center">
+                        <a href="#">Iniciar Sesión</a>
+                    </div>
+                </form>
+            </div>
+            <div class="row no-se-muestra">
                 <div class="col-4">
                     <section class="menu mt-4 mb-4">
                         <a href="#">
@@ -70,12 +96,6 @@
                             Socios Criminales
                         </a>
                     </section>
-
-                    <section class="login mb-4">
-                        <p>Sin acceso, no hay producto. Entra al laboratorio, o quédate fuera del negocio.</p>
-                     <button>Identificarse</button> 
-                    </section>
-
                     <section class="usuarios-sugeridos">
                         <p>Criminales Sugeridos</p>
 
@@ -104,7 +124,7 @@
                             <span>CapnCook</span>
                         </div>
 
-                        <button class="mt-2">
+                        <button class="expandir-imperio mt-2">
                             Expandir el imperio
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 class="bi bi-chevron-down" viewBox="0 0 16 16">
@@ -117,13 +137,39 @@
                                 />
                             </svg>
                         </button>
+                            <div class="usuario sugeridos">
+                                <img src="assets/imgs/conejomalo.jpg" alt="">
+                                <span>ConejitoMalo</span>
+                            </div>
+
+                            <div class="usuario sugeridos">
+                                <img src="assets/imgs/W.Blanco.webp" alt="">
+                                <span>W_Blanco</span>
+                            </div>
+
+                            <div class="usuario sugeridos">
+                                <img src="assets/imgs/pirana.jpg" alt="">
+                                <span>Piraña</span>
+                            </div>
+
+                            <div class="usuario sugeridos">
+                                <img src="assets/imgs/El_Don.jpg" alt="">
+                                <span>El_Don</span>
+                            </div>
+
+                            <div class="usuario sugeridos">
+                                <img src="assets/imgs/capNCook.jpg" alt="">
+                                <span>CapnCook</span>
+                            </div>
+
+                        
                     </section>
                 </div>
 
                 <div class="col-6 margen">
                     <section class="post">
                         <div class="post-header">
-                            <img src="assets/imgs/walter.jpeg" alt="">
+                            <img src="assets/imgs/walter.jpeg" id = "usuario-img" alt="">
                             <span><strong>Heisenberg</strong></span>
                         </div>
 

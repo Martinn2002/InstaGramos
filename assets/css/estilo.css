@@ -206,3 +206,33 @@ button{
 li{
     list-style: none;
 }
+
+.login-popup {
+  position: absolute;
+  background-color: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  margin-top: 5%;
+  margin-left: 24%;
+}
+
+.login-popup button{
+  margin-top: 20px;
+}
+
+/* Hace desaparecer el contenido de la pagina mientras el login pop up este activo */
+
+.se-muestra{
+    display: flex;
+}
+
+.no-se-muestra{
+    display: none !important;
+}
+
+.sugeridos{
+  display: none;
+}

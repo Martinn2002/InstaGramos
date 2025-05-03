@@ -31,3 +31,40 @@ document.getElementById('btn-publicar').addEventListener('click', function() {
 
 // Nota adicional, el formulario es type "button" por que si lo escribes con type "submit" se recarga la pagina y no queda guardado el comentario.
     
+
+document.getElementById('btn-login').addEventListener('click', function() {
+    var nombre = document.getElementById('usuario').value; 
+    var fotoInput = document.getElementById('foto'); // Obtenemos el input
+    var elementos = document.querySelectorAll('.no-se-muestra');
+    
+    elementos.forEach(function(elemento) {
+        elemento.classList.remove('no-se-muestra');
+        elemento.classList.add('se-muestra');
+    });
+    
+    var popup = document.querySelector('.login-popup');
+    popup.classList.add('no-se-muestra');
+
+    if (fotoInput.files && fotoInput.files[0]) {
+        var reader = new FileReader();
+        reader.onload = function(e) {
+            // selecciona todas las imágenes con la clase 'usuario-img'
+            var imagenes = document.querySelectorAll('.usuario-img');
+            imagenes.forEach(function(img) {
+                img.src = e.target.result;
+            });
+        };
+        reader.readAsDataURL(fotoInput.files[0]);
+    }
+});
+
+
+document.getElementsByClassName('expandir-imperio')[0].addEventListener('click', function() {
+    var popup = document.querySelector('.expandir-imperio');
+    popup.classList.add('no-se-muestra');
+    var sugeridos = document.querySelectorAll('.sugeridos');
+    for (var i = 0; i < sugeridos.length; i++) {
+        sugeridos[i].classList.remove('sugeridos');
+        sugeridos[i].classList.add('se-muestra');
+    }
+})
