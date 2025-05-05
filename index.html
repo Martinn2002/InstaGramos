@@ -28,7 +28,7 @@
       <i class="fas fa-user"></i>
       <i class="fas fa-envelope"></i>
       <i class="fas fa-cog"></i>
-      <img src="assets/imgs/walter.jpeg" id = "usuario-img" alt="Usuario">
+      <img src="assets/imgs/walter.jpeg" class = "usuario-img" alt="Usuario">
     </div>
   </header>
     <main>
@@ -40,19 +40,19 @@
                 </div>
                 <form>
                     <div class="mb-3">
+                        <label for="foto" class="form-label">Selecciona una foto de perfil</label>
+                        <input class="form-control" type="file" id="foto">
+                    </div>
+    
+                    <div class="mb-3">
                         <input type="text" class="form-control" id="usuarioNombre" name="usuarioNombre" placeholder="Nombre de usuario" required>
                     </div>
     
                     <div class="mb-3">
                         <input type="password" class="form-control" id="contrasena" name="contrasena" placeholder="Contraseña" required> </div>
-                    
-                    <div>
-                        <input class="form-control" type="file" id="foto">
-                        <img  id="usuario">
-                    </div>
     
                     <div class="mb-3 text-center">
-                        <button type="button" id="btn-login" class="button"> Iniciar sesión </button>
+                        <button type = "button" id="btn-login" class="button"> Registrarse </button>
                     </div>
                     <div class="text-center">
                         <a href="#">¿No tienes cuenta? Registraté</a>
@@ -157,11 +157,6 @@
                                 <span>El_Don</span>
                             </div>
 
-                            <div class="usuario sugeridos">
-                                <img src="assets/imgs/capNCook.jpg" alt="">
-                                <span>CapnCook</span>
-                            </div>
-
                         
                     </section>
                 </div>
@@ -169,7 +164,7 @@
                 <div class="col-6 margen">
                     <section class="post">
                         <div class="post-header">
-                            <img src="assets/imgs/walter.jpeg" id = "usuario-img" alt="">
+                            <img src="assets/imgs/walter.jpeg"  alt="">
                             <span><strong>Heisenberg</strong></span>
                         </div>
 

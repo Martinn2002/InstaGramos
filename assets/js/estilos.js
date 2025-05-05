@@ -15,10 +15,12 @@ document.getElementById('btn-publicar').addEventListener('click', function() {
         return
     }else {
     // y aqui lo mas "complicado". Lista, que es el bloque de comentarios, le estoy agregando un nuevo bloque completo de comentarios, usando innerHTML entro al bloque para modificarlo desde dentro del HTML, que es lo que se ve en la pagina obviamente. se escribe igual como si fueras a agregar un nuevo comentario en el html, pero se concatena con la variable texto, que es lo que esta escrito en el formulario.
+    
+    nombre = document.getElementById('usuarioNombre').value;
     lista.innerHTML +=
         '<li><div class="comentario">' +
-          '<img src="assets/imgs/walter.jpeg" alt="">' +
-          '<strong>Heisenberg</strong>' +
+          '<img src="'+ fotoURL +'" alt="">' +
+          '<strong>'+ nombre +'</strong>' +
           '<p>' + texto + '</p>' +
         '</div></li>';
 
@@ -31,30 +33,42 @@ document.getElementById('btn-publicar').addEventListener('click', function() {
 
 // Nota adicional, el formulario es type "button" por que si lo escribes con type "submit" se recarga la pagina y no queda guardado el comentario.
     
+let  fotoInput = document.getElementById('foto'); 
+let nombre
+let contrasena
+let fotoURL = 'assets/imgs/walter.jpeg'; 
 
 document.getElementById('btn-login').addEventListener('click', function() {
-    var nombre = document.getElementById('usuario').value; 
-    var fotoInput = document.getElementById('foto'); // Obtenemos el input
+    nombre = document.getElementById('usuarioNombre').value;
+
+    contrasena = document.getElementById('contrasena').value;
+    if(nombre.length > 0 && contrasena.length > 0) {
+
     var elementos = document.querySelectorAll('.no-se-muestra');
-    
+
     elementos.forEach(function(elemento) {
         elemento.classList.remove('no-se-muestra');
         elemento.classList.add('se-muestra');
     });
-    
+
     var popup = document.querySelector('.login-popup');
     popup.classList.add('no-se-muestra');
 
     if (fotoInput.files && fotoInput.files[0]) {
         var reader = new FileReader();
         reader.onload = function(e) {
-            // selecciona todas las imágenes con la clase 'usuario-img'
+            fotoURL = e.target.result;
             var imagenes = document.querySelectorAll('.usuario-img');
             imagenes.forEach(function(img) {
-                img.src = e.target.result;
+                img.src = fotoURL;
             });
         };
         reader.readAsDataURL(fotoInput.files[0]);
+    }
+   alert(e.target.result);
+    }else{
+        alert('Por favor, completa todos los campos.');
+        return
     }
 });
 
