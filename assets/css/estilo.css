@@ -236,3 +236,43 @@ li{
 .sugeridos{
   display: none;
 }
+
+
+
+
+
+
+.heart {
+            width: 24px;
+            height: 24px;
+            background-color: #ccc;
+            position: relative;
+            transform: rotate(-45deg);
+            cursor: pointer;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .heart:before,
+        .heart:after {
+            content: "";
+            width: 24px;
+            height: 24px;
+            background-color: inherit;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .heart:before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart:after {
+            left: 10px;
+            top: 0;
+        }
+
+        .heart.clicked {
+            transform: scale(1.2) rotate(-45deg);
+            background-color: red;
+        }

@@ -84,3 +84,8 @@ document.getElementsByClassName('expandir-imperio')[0].addEventListener('click',
         sugeridos[i].classList.add('se-muestra');
     }
 })
+
+
+function toggleLike() {
+    document.querySelector('.heart').classList.toggle('clicked');
+}
