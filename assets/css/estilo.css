@@ -243,8 +243,8 @@ li{
 
 
 .heart {
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             background-color: #ccc;
             position: relative;
             transform: rotate(-45deg);
@@ -255,20 +255,20 @@ li{
         .heart:before,
         .heart:after {
             content: "";
-            width: 24px;
-            height: 24px;
+            width: 22px;
+            height: 22px;
             background-color: inherit;
             border-radius: 50%;
             position: absolute;
         }
 
         .heart:before {
-            top: -10px;
+            top: -9px;
             left: 0;
         }
 
         .heart:after {
-            left: 10px;
+            left: 9px;
             top: 0;
         }
 
