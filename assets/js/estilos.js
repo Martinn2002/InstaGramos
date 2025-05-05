@@ -89,3 +89,8 @@ document.getElementsByClassName('expandir-imperio')[0].addEventListener('click',
 function toggleLike() {
     document.querySelector('.heart').classList.toggle('clicked');
 }
+
+
+function toggleSave() {
+    document.querySelector('.save-icon').classList.toggle('saved');
+}
