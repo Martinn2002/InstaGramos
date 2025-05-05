@@ -1,7 +1,7 @@
 // Le voy a poner comentarios linea por linea para que sepas que hace cada cosa, por que uff.
 
-// El event listener ya sabes que hace, se apreta el boton y se ejecuta la funcion. OJO, el id del boton es btn-publicar, al principio se lo puse al formulario completo y cada vez que apretaba el formulario se escribia algo.
 
+// El event listener ya sabes que hace, se apreta el boton y se ejecuta la funcion. OJO, el id del boton es btn-publicar, al principio se lo puse al formulario completo y cada vez que apretaba el formulario se escribia algo.
 document.getElementById('btn-publicar').addEventListener('click', function() {
 
     // Aqui estoy creando una variable que se llama lista y le estoy asignando el bloque completo de id 'lista-comentarios', buscalo en el html.  
@@ -24,6 +24,7 @@ document.getElementById('btn-publicar').addEventListener('click', function() {
           '<p>' + texto + '</p>' +
         '</div></li>';
 
+        
         document.getElementById('texto-caja').value = '' // Aqui estoy limpiando la caja, para que quede vacio una vez que se aprete el boton de enviar comentario.
         }
 }) 
@@ -37,6 +38,7 @@ let  fotoInput = document.getElementById('foto');
 let nombre
 let contrasena
 let fotoURL = 'assets/imgs/walter.jpeg'; 
+let user 
 
 document.getElementById('btn-login').addEventListener('click', function() {
     nombre = document.getElementById('usuarioNombre').value;
